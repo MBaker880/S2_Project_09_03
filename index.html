@@ -7,8 +7,8 @@
       Case Problem 3
 
       CSS Demo Form
-      Author: 
-      Date:   
+      Author: Mackenzie Baker
+      Date:   1.19.2019
 
       Filename:   wm_demo.html
 
@@ -17,7 +17,10 @@
    <meta charset="utf-8" />
       <title>CSS Styles Demo</title>
       <link href="wm_reset.css" rel="stylesheet" />      
-      <link href="wm_styles.css" rel="stylesheet" />     
+      <link href="wm_styles.css" rel="stylesheet" />
+      <link href="wm_forms.css" rel="stylesheet" /> 
+      <script src="wm_script.js"></script>
+
    </head>
 
 
@@ -69,6 +72,44 @@
       <section>
          <h1>CSS Demo</h1>
          
+         <form >
+            <textarea name="sampleText" id="sampleBox" tabindex="1" wrap="hard" placeholder="Enter sample text and press the Tab key." autofocus></textarea>
+            <p>Select the CSS style values from the form below and preview the effect on the sample text in the preview box.</p>
+            <fieldset>
+               <legend>Fonts</legend>
+
+               <label for="fontfamily" >Font Family</label>
+               <select name="fontfamily" id="fontfamily">
+                  <optgroup name="generic">
+                     <option value="Default">Default</option>
+                     <option value="Serif">Serif</option>
+                     <option value="Sans-serif">Sans-serif</option>
+                     <option value="Monospace">Monospace</option>
+                     <option value="Cursive">Cursive</option>
+                     <option value="Fantasy">Fantasy</option>
+                  </optgroup>
+                  <optgroup name="specific">
+                     <option value="Arial">Arial</option>
+                     <option value="‘Book Antiqua’">‘Book Antiqua’</option>
+                     <option value="‘Courier New’">‘Courier New’</option>
+                     <option value="Geneva">Geneva</option>
+                     <option value="Helvetica">Helvetica</option>
+                     <option value="Impact">Impact</option>
+                     <option value="Palatino">Palatino</option>
+                     <option value="Tahoma">Tahoma</option>
+                     <option value="'Times New Roman'">'Times New Roman'</option>
+                  </optgroup>
+               </select>
+
+               <label for="fontstyle">Font Style</label>
+               <select name="fontstyle" id="fontstyle">
+                  <option value="Normal">Normal</option>
+                  <option value="Italic">Italic</option>
+                  <option value="Oblique">Oblique</option>
+               </select>
+
+            </fieldset>
+         </form>
 
          <h2>Rendered Text</h2>
          <div id="output"></div>
